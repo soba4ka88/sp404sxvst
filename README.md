@@ -17,57 +17,7 @@ A VST3/AU plugin that emulates classic Roland SP-404SX effects.
 ---
 
 ## Build Instructions (Beginner-Friendly)
-
-### Step 1 — Install Prerequisites
-
-#### Windows
-1. Install **Visual Studio 2022 Community** (free): https://visualstudio.microsoft.com/
-   - During install, check: **"Desktop development with C++"**
-2. Install **CMake**: https://cmake.org/download/
-   - During install, select **"Add CMake to PATH"**
-3. Install **Git**: https://git-scm.com/download/win
-
-#### macOS
-1. Install **Xcode** from the App Store (free)
-2. Open Terminal, run: `xcode-select --install`
-3. Install **Homebrew**: https://brew.sh then run `brew install cmake git`
-
-#### Linux (Ubuntu/Debian)
-```bash
-sudo apt update
-sudo apt install cmake git build-essential \
-    libasound2-dev libfreetype6-dev libx11-dev \
-    libxcomposite-dev libxcursor-dev libxext-dev \
-    libxinerama-dev libxrandr-dev libxrender-dev \
-    libwebkit2gtk-4.0-dev libglu1-mesa-dev mesa-common-dev
-```
-
----
-
-### Step 2 — Build the Plugin
-
-Open a terminal (or Command Prompt on Windows) in this folder.
-
-```bash
-# Create a build folder
-mkdir build
-cd build
-
-# Configure (downloads JUCE automatically ~500MB, takes a few minutes)
-cmake ..
-
-# Build (use -j4 to use 4 CPU cores, replace with your count)
-cmake --build . --config Release -j4
-```
-
----
-
-### Step 3 — Install the Plugin
-
-#### Windows
-After building, find `SP404SX.vst3` in:
-```
-build/SP404SX_artefacts/Release/VST3/SP404SX.vst3
+find `SP404SX.vst3` in:
 ```
 Copy it to:
 ```
